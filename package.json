@@ -1,0 +1,15 @@
+{
+  "name": "js-async-newswebsite",
+  "version": "1.0.0",
+  "description": "project eduwork berita with searchbar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "faiz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}
