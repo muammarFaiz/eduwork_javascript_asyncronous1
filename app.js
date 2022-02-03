@@ -1,3 +1,5 @@
+// jshint esversion: 8
+// buat localhost syarat untuk GET newsapi
 
 const express = require('express');
 

@@ -24,21 +24,23 @@ function search (url) {
         </div>
       </div>`;
       indexArticle++;
-    }); // loop
-    // console.log(toAdd);
+    });
+
     if (myjson.articles.length == 0) {
       $('#searchbarNotif').text('Tidak ada hasil');
     } else {
       $('#searchbarNotif').text('');
       cards.html(toAdd);
     }
-  }); // .then
+  });
 }
+
 
 let endpoint1 = 'https://newsapi.org/v2/top-headlines?';
 let endpoint2 = 'https://newsapi.org/v2/everything?';
 let urlHeadline = endpoint1 + 'country=id&apiKey=5b5faf373f0c4c269683b16bece8f00b';
 search(urlHeadline);
+
 
 function searchA () {
   let searchbar = $('#faizSearch').val();
@@ -48,10 +50,12 @@ function searchA () {
     $('#searchbarNotif').text('');
     $('#searchbarNotif').text('searchbar tidak boleh kosong');
   } else {
+
     $('#searchbarNotif').text('Loading...');
     let edited = searchbar.replace(/ /g, '%20AND%20');
     console.log(edited);
-    let urlSearch = endpoint2 + `q=${edited}&apiKey=5b5faf373f0c4c269683b16bece8f00b`;
-    search(urlSearch);
+    let urlToFetch = endpoint2 + `q=${edited}&apiKey=5b5faf373f0c4c269683b16bece8f00b`;
+    search(urlToFetch);
+
   }
 }
